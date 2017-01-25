@@ -6,7 +6,7 @@ class MainHandler(webapp2.RequestHandler):
     def makeform(self, username='', email='', usernameErr='', passwordErr='',
                     confirmPasswordErr='', emailErr=''):
         form = '''<form method='post'>
-                    <h2>Signup</h2>
+                    <h1>Signup</h1>
                     <label>Username
                         <input type='text' name='username' value=%(username)s>
                     </label>
@@ -85,7 +85,7 @@ class MainHandler(webapp2.RequestHandler):
 
 class Welcome(webapp2.RequestHandler):
     def get(self):
-        self.response.write("<h1>Welcome " + self.request.get(username) + "</h1>")
+        self.response.write("<h1>Welcome, " + self.request.get("username") + "!</h1>")
 
 app = webapp2.WSGIApplication([
                 ('/', MainHandler),
