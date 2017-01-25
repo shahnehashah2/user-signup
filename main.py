@@ -10,22 +10,30 @@ class MainHandler(webapp2.RequestHandler):
                     <label>Username
                         <input type='text' name='username' value=%(username)s>
                     </label>
-                    %(usernameErr)s
+                    <div style="display:inline-block; color:#ff0000;">
+                        %(usernameErr)s
+                    </div>
                     <br>
                     <label>Password
                         <input type='password' name='password'>
                     </label>
-                    %(passwordErr)s
+                    <div style="display:inline-block; color:#ff0000;">
+                        %(passwordErr)s
+                    </div>
                     <br>
                     <label>Confirm Password
                         <input type='password' name='confirmpassword'>
                     </label>
-                    %(confirmPasswordErr)s
+                    <div style="display:inline-block; color:#ff0000;">
+                        %(confirmPasswordErr)s
+                    </div>
                     <br>
                     <label>Email(optional)
                         <input type='text' name='email' value=%(email)s>
                     </label>
-                    %(emailErr)s
+                    <div style="display:inline-block; color:#ff0000;">
+                        %(emailErr)s
+                    </div>
                     <br>
                     <input type='submit'>
                 </form>'''
